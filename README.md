@@ -54,3 +54,19 @@
 <br/>
 ![10418241-7ba0289f4aec6c29](https://user-images.githubusercontent.com/30063579/117234794-400ed100-ae58-11eb-95db-13b1d76100e6.png)
 
+## 2.egg.js
+
+### 2.1内置对象
+
+**微注**：继承koa4个内置对象，context、request、respond、Application，及框架扩展的一些对象（Logger,Controller,Service,Helper,Config）
+
+### 2.1.2Application
+
+**事件**：启动自定义脚本进行监听工作。
+
+```js
+1，server：该事件一个worker进程只会触发一次，在一个http启动之后，提供http server 給开发者。
+2，onerror：运行有任何的异常都会被error捕获。对错误对象和关联的上下文暴露给开发者。
+3，request和response：当收到请求和相应请求的时候，会触发。开发者可以监听request和response进行日志记录。
+```
+
